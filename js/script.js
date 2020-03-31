@@ -1,15 +1,15 @@
 let money, time;
 
-function start() {
-	money = +prompt("Ваш бюджет на месяц?", '');
-	time = prompt('Введите дату в формате YYYY-MM-DD', '');
+// function start() {
+// 	money = +prompt("Ваш бюджет на месяц?", '');
+// 	time = prompt('Введите дату в формате YYYY-MM-DD', '');
 
-	while(isNaN(money) || money == "" || money == null) {
-		money = +prompt("Ваш бюджет на месяц?", '');
-	}
-}
+// 	while(isNaN(money) || money == "" || money == null) {
+// 		money = +prompt("Ваш бюджет на месяц?", '');
+// 	}
+// }
 
-start();
+// start();
 
 let appData = {
 	budget: money,
@@ -79,10 +79,11 @@ let appData = {
 		
 		appData.income.sort();
 
+		let arr = [];
 		appData.income.forEach(function (item, i) {
-			alert("Дополнительные заработки: " + (i+1) + " - " + item);
+			arr.push(' ' + (i+1) + " - " + item);
 		});
-
+		alert("Дополнительные заработки: " + arr);
 	}
 	
 };
